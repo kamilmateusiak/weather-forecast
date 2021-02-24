@@ -1,0 +1,82 @@
+$border-primary-color: #000;
+$label-color: #8d919c;
+$font-primary-color: #404146;
+$field-hover-border-color: #000;
+$error-color: red;
+$primary-color: #000;
+
+.field {
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 14px;
+  color: $label-color;
+  display: block;
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+
+.error {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: red;
+  display: block;
+  margin: 0;
+  margin-top: 2px;
+}
+
+.input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  max-width: 100%;
+  min-width: 200px;
+  line-height: 1.2;
+  padding: 8px 10px;
+  font-size: 15px;
+  color: $font-primary-color;
+  box-sizing: border-box;
+  transition: border 0.25s ease-in-out;
+  will-change: border-color;
+  background-clip: padding-box;
+
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $font-primary-color;
+    opacity: 0.4; /* Firefox */
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $font-primary-color;
+    opacity: 0.4;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $font-primary-color;
+    opacity: 0.4;
+  }
+
+  &:hover {
+    border-color: $field-hover-border-color;
+    outline: 0;
+  }
+
+  &:focus {
+    border-color: $primary-color;
+    outline: 0;
+  }
+
+  &--error,
+  &--error:focus {
+    border-color: $error-color;
+  }
+
+  &:disabled {
+    color: $font-primary-color;
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
