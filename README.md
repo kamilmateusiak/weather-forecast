@@ -1,6 +1,8 @@
 ## Installation
 
 Fetch the repository and run `npm install` or `yarn` and install all dependencies.
+
+Also you will need to configure the [https://openweathermap.org/api](api) and generate api key.
 Remember to create .env file based on .env.example. The values declared there will be used in the code.
 
 ## Available Scripts
