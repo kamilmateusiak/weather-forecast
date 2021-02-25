@@ -31,3 +31,11 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Future features
+
+1. I plan to add dark mode to the app. It will be smoothly handled by tailwind.
+2. Browser Geolocalization API could be used to pre-fill the search input for the user. This will require asking for a permission to the user localization.
+3. Improving error handling for search.
+4. Code tests coverage increase - react-testing-library should be used for basic tests of components. Also Cypress will be used for end-to-end testing.
+5. Progressive app support and properly caching values for maximum 3 hours.
