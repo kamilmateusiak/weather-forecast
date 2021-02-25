@@ -29,4 +29,7 @@ export type ForecastModel = {
     };
   };
   dates: string[];
+  minimumTemp: number;
+  maximumTemp: number;
+  meanTemp: number;
 };

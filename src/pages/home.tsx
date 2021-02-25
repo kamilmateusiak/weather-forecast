@@ -5,6 +5,7 @@ import { Button } from "../components/button";
 import { Form, FormField, Input } from "../components/form";
 import { Loader } from "../components/loader";
 import { FIVE_DAY_FORECAST_QUERY } from "../constants";
+import ForecastStats from "../containers/forecase-stats";
 import ForecastTable from "../containers/forecast-table";
 
 const HomePage: React.FC = () => {
@@ -38,7 +39,7 @@ const HomePage: React.FC = () => {
   );
 
   return (
-    <div className="bg-gray-100  h-screen overflow-auto">
+    <div className="bg-gray-100  min-h-screen overflow-auto">
       <div className="container mx-auto px-4">
         <div className="px-4 py-10">
           <Loader isVisible={isFetching} />
@@ -65,7 +66,12 @@ const HomePage: React.FC = () => {
             </div>
           )}
 
-          {data && <ForecastTable data={data} />}
+          {data && (
+            <div>
+              <ForecastTable data={data} />
+              <ForecastStats data={data} />
+            </div>
+          )}
 
           {error && isError(error) && (
             <div className="text-center">

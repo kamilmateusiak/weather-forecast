@@ -25,6 +25,9 @@ it("deserializeForecast should return", () => {
       },
     },
     dates: ["2021-02-25", "2021-02-26"],
+    maximumTemp: 10,
+    meanTemp: 8,
+    minimumTemp: 6,
   };
 
   expect(deserializeForecast(forecastApiData)).toEqual(expectedResult);
